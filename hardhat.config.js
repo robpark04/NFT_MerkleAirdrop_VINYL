@@ -13,7 +13,8 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 
 // You need to export an object to set up your config
 // Go to https://hardhat.org/config/ to learn more
-const TEST_WALLET_PRIVATE_KEY = "5b40ece50cfe0ab4d33629ebbdc5081add864d655c9df430575f37d87a20701d";
+const TEST_WALLET_PRIVATE_KEY = "YOUR_TEST_WLLET_PRIVATE_KEY";
+const ALCHMY_KEY = "ALCHMY_KEY";
 /**
  * @type import('hardhat/config').HardhatUserConfig
  */
@@ -22,7 +23,7 @@ module.exports = {
   networks: {
 
     rinkeby: {
-      url: `https://eth-rinkeby.alchemyapi.io/v2/fnsX3XmIOEWWkXsjN2WUlZ1oQYP-qs9g`,
+      url: `${ALCHMY_KEY}`,
       accounts: [`${TEST_WALLET_PRIVATE_KEY}`]
     }
   },
@@ -30,8 +31,8 @@ module.exports = {
     // Your API key for Etherscan
     // Obtain one at https://etherscan.io/
     apiKey: {
-      mainnet: "JASQCEV9GXBSK5TD5JEVZDER389ZJ4M395",
-      rinkeby: "JASQCEV9GXBSK5TD5JEVZDER389ZJ4M395",
+      mainnet: "YOUR_API_KEY",
+      rinkeby: "YOUR_API_KEY",
     }
   }
 };
