@@ -43,16 +43,16 @@ contract VINYL is ERC1155PackedBalance, Ownable, ReentrancyGuard {
 
     mapping (uint256 => uint256) _redeemed;
 
-    uint256 public constant MINT_VINYL = 0;
-    uint256 public constant GOLD_VINYL = 1;
-    uint256 public constant ONYX_VINYL = 2;
-
+    uint8 public constant MINT_VINYL = 0;
+    uint8 public constant GOLD_VINYL = 1;
+    uint8 public constant ONYX_VINYL = 2;
+    
     /*
      * Function to mint NFTs (internal)
     */
     function mint(address to, uint mint_type) internal {
-        uint256[] memory Collect = new uint256[](2);
-        uint256[] memory Count = new uint256[](2);
+        uint[] memory Collect = new uint[](2);
+        uint[] memory Count = new uint[](2);
         
         if (mint_type == 1){
             _mint(to, MINT_VINYL, 1, "");
